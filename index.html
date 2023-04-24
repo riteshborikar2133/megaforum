@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Forum</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+</head>
+<body>
+    <div class="nav">
+        <div class="navl">
+            Mega Forum
+            <i id="btn" class="material-icons btn">&#xe8ee;</i>
+        </div>
+        <div class="navr">
+            <ul id="li" class="list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">About us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="/2362151.jpg" alt="">
+              </div>
+              <div class="swiper-slide"><img src="/1356706-Doraemon-HD-Wallpaper.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="/RN2DzHGN.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </div>
+    <div class="Events">
+        <h1>Events</h1>
+        <hr>
+        <div class="card">
+            <div class="c1">
+                <img src="/1356706-Doraemon-HD-Wallpaper.jpg" alt="">
+                <div class="txt">
+                    <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quibusdam, reprehenderit eum dolor accusantium doloremque velit alias. Provident, ducimus accusantium.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c1">
+                <img src="/2362151.jpg" alt="">
+                <div class="txt">
+                    <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quibusdam, reprehenderit eum dolor accusantium doloremque velit alias. Provident, ducimus accusantium.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c1">
+                <img src="/RN2DzHGN.jpg" alt="">
+                <div class="txt">
+                    <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quibusdam, reprehenderit eum dolor accusantium doloremque velit alias. Provident, ducimus accusantium.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script>
+    var btn = document.getElementById('btn');
+    var nav = document.getElementById('li');
+    btn.addEventListener("click",()=>{
+        nav.classList.toggle('active');
+    })
+
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+</script>
+</html>

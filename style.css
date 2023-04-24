@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 16px; */
+    font-size: 16px;
+}
+body{
+    /* min-height: 100vh; */
+    background-color: #040c17;
+}
+.head{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+}
+.bubbles{
+    position: relative;
+    display: flex;
+}
+.bubbles span{
+    position:relative;
+    width: 2rem;
+    height: 2rem;
+    background-color: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 1.2rem #4fc3dc44, 0 0 2.2rem #4fc3dc,0 0 2.6rem #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc( 125s/ var(--i));
+}
+.bubbles span:nth-child(even){
+    background: #ff2d45;
+    box-shadow: 0 0 0 1rem #ff2d7544, 0 0 1rem #ff2d45, 0 0 1rem #ff2d45;
+}
+.bubbles span:nth-child(odd){
+    background: #4fc3dc;
+    box-shadow: 0 0 0 1rem #4fc3dc44, 0 0 1rem #4fc3dc, 0 0 1rem #4fc3dc;
+
+}
+@keyframes animate {
+    0%{
+        transform: translateY(50vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.nav{
+    background: black;
+    color: white;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    flex-wrap: wrap ;
+}
+.navl{
+    text-align: center;
+    font-size: 2rem;
+}
+.navl .btn{
+    display: none;
+}
+.list{
+    /* border: 1px solid red; */
+    text-align: center;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list li{
+    /* border: 1px solid red; */
+    padding: 0.2rem 0.8rem;
+    list-style: none;
+    cursor: pointer;
+}
+.list li a{
+    text-decoration: none;
+    color: #4fc3dc;
+    font-size: 1.2rem;
+}
+.list li a:hover{
+    color: #ff2d45;
+    text-shadow: 1px 1px 30px #ff2d45;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.Events{
+    color: aliceblue;
+    text-align: center;
+    margin: 2rem;
+}
+.Events h1{
+    font-size: 2rem;
+    text-shadow: 0px 2px 1px rgb(21, 22, 72),0px 2px 1px white;
+}
+.Events hr{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+.card{
+    display: flex;
+    /* flex-direction: column; */
+    /* border: 1px solid red; */
+    /* height: 19rem; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.c1{
+    border: 8px solid whitesmoke;
+    margin: 1rem 0rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+.c1 img{
+    width: 30rem;
+    height: 25rem;
+}
+.c1 .txt{
+    font-size: 2rem;
+    /* background-color: rgb(255, 255, 255); */
+    backdrop-filter: blur(10px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 30rem;
+    border-radius:2rem;
+    padding: 1.3rem;
+    color: #000000;
+    transition: 0.5s;
+}
+.c1:hover .txt{
+    left: 0;
+}
+@media screen and (max-width:400px) {
+    *{
+        font-size: 12px;
+    }
+    .nav{
+        padding: 1rem 2rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .navl{
+        /* border: 1px solid yellow; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navl .btn{
+        display: block  ;
+    }
+    .navr{
+        margin: 0;
+    }
+    .list{
+        display: none;
+        /* border: 1px solid red;   */
+        /* display: block; */
+        transition: 0.5s;
+        flex-direction: column;
+        left: 0;
+        position: absolute;
+        top: 4rem;
+        width: 100vw;
+        z-index: 2;
+        background-color: #000000;
+    }
+    .btn{
+        cursor: pointer;
+    }
+    .active{
+        display: block;
+    }
+    .list li{
+        margin: 1rem;
+    }
+    .navr li a{
+        margin: 1rem auto;
+        /* border: 1px solid red;   */
+        width: 90%;
+        transition: 0.5s;
+    }
+    .navr li a:hover{
+        background-color: aliceblue;
+        padding: 0 2rem;
+        border-radius: 30rem;
+        color: #1f1a1a;
+        font-size: 1.5rem;
+    }
+}
