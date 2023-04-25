@@ -111,7 +111,6 @@ body{
     object-fit: cover;
 }
 
-
 .Events{
     color: aliceblue;
     text-align: center;
@@ -147,8 +146,7 @@ body{
     width: 30rem;
     height: 25rem;
 }
-.c1 .txt{
-    font-size: 2rem;
+.txt{
     /* background-color: rgb(255, 255, 255); */
     backdrop-filter: blur(10px);
     height: 100%;
@@ -163,9 +161,63 @@ body{
 .c1:hover .txt{
     left: 0;
 }
+.preload{
+    background-color: #000000;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+h2{
+    position: absolute;
+    top: 22rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    text-transform: capitalize;
+    /* z-index: 1; */
+    /* overflow: hidden; */
+}
+h2::before{
+    content: '';
+    position: absolute;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(90deg,transparent 0%,#000 5%,#000 100%);
+    animation: animate 3s linear forwards;
+    animation-delay: 3s;
+}
+video{
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+@keyframes animate{
+    0%{
+        left: 120%;
+    }
+    100%{
+        left: -20%;
+    }
+}
+h2 .co{
+    color: #ff022c;
+    font-size: 3rem;
+}
+
 @media screen and (max-width:400px) {
     *{
-        font-size: 12px;
+        font-size: 9px;
     }
     .nav{
         padding: 1rem 2rem;
@@ -183,6 +235,9 @@ body{
     }
     .navr{
         margin: 0;
+    }
+    .c1 .txt h3{
+        font-size: 1.6rem;
     }
     .list{
         display: none;
